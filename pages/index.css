@@ -13,3 +13,12 @@
 @import url(../blocks/profile/__image/profile__image.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/add-button/add-button.css);
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/elements/__cards/elements__cards.css);
+@import url(../blocks/elements/__card/elements__card.css);
+@import url(../blocks/elements/__image/elements__image.css);
+@import url(../blocks/elements/__card-text/elements__card-text.css);
+@import url(../blocks/elements/__button-like/elements__button-like.css);
+@import url(../blocks/elements/__handle/elements__handle.css);
+@import url(../blocks/elements/__button-delete/elements__button-delete.css);
+@import url(../blocks/footer/__text/footer__text.css);

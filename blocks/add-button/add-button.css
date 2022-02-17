@@ -5,6 +5,7 @@
   width: 150px;
   height: 50px;
   margin-left: auto;
+  margin-right: 20px;
   padding: 14px 64px;
   background-image: url(../../images/plus\ button.svg);
   background-repeat: no-repeat;
@@ -15,7 +16,7 @@
   transition: opacity 0.8s linear 0.05s;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .add-button {
     padding: 17px 17px;
     margin: 36px auto;
