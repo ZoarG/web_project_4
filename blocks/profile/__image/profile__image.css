@@ -1,0 +1,16 @@
+.profile__image {
+  margin: 3.75px 26.25px 3.75px 0px;
+  border-radius: 50%;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__image {
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+}

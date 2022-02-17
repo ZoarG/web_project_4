@@ -1,0 +1,15 @@
+.profile__edit-button {
+  display: flex;
+  align-self: center;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  padding: 7px;
+  background-image: url(../../../images/pencil.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 16px;
+  transition: opacity 0.8s linear 0.5s;
+}
