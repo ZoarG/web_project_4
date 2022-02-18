@@ -10,6 +10,23 @@
 </head>
 
 <body class="page">
+    <section class="popup popup_type_profile" id="popup-template">
+        <div class="popup__square">
+            <form name="profileForm" class="popup__form popup__form_edit" novalidate>
+                <h1 class="popup__title">Edit Profile</h1>
+                <label class="popup__formfield">
+                    <input class="popup__input popup__input_type_name" type="text" placeholder="Name" id="name-input"
+                        minlength="2" maxlength="40" required>
+                </label>
+                <label class="popup__formfield">
+                    <input class="popup__input popup__input_type_profession" type="text" placeholder="Profession"
+                        id="profession-input" minlength="2" maxlength="200" required>
+                </label>
+                <button type='submit' class="popup__save">Save</button>
+                <button type='button' class='popup__close'></button>
+            </form>
+        </div>
+    </section>
     <section class="header">
         <img class="header__logo" src="./images/logo.svg" alt="around the us">
         <div class="header__border"></div>
@@ -26,7 +43,6 @@
             </div>
             <button type="button" class="add-button"></button>
         </section>
-
         <section class="elements">
             <ul class="elements__cards">
                 <li class="elements__card">
@@ -77,6 +93,7 @@
             <p class="footer__text">© 2022 Around The U.S.</p>
         </footer>
     </main>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
