@@ -2,15 +2,18 @@
 
 ### Overview
 
-* Figma
-* Images
+This is project 4 in practicum's sprint.
+In this sprint we have started to use javaScript and have combined js scripts with a responsive layout.
+the design follows a figma template provided below.
+
+## Technologies
+
+In this project, I have used html5, css, and javascript.
 
 **Figma**
 
-* [Link to the project in Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
+- [Link to the project in Figma](https://www.figma.com/file/SurN1jaeEQIhuZEDMhmWWf/Sprint-4-Around-The-U.S.-desktop-mobile?node-id=0%3A1)
 
-**Images**
+### Project link:
 
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-
-Have fun with JavaScript!
+https://zoarg.github.io/web_project_4/index.html
