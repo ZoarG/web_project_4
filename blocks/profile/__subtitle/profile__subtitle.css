@@ -15,5 +15,6 @@
   .profile__subtitle {
     font-size: 16px;
     max-width: 75%;
+    margin-bottom: 36px;
   }
 }

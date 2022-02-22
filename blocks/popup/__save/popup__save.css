@@ -19,21 +19,20 @@
   opacity: 0.8;
 }
 
-.popup__save_disabled {
-  background-color: #e5e5e5;
-  color: #000000;
-  border-color: #000000;
-  opacity: 0.2;
-}
-
 @media screen and (max-width: 524px) {
   .popup__save {
-    max-width: 238px;
+    max-width: 200px;
     display: flex;
     justify-content: center;
     padding: 14px 100px;
     margin: 16px 0px 0px;
     font-size: 14px;
     line-height: 17px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .popup__save {
+    max-width: 238px;
   }
 }

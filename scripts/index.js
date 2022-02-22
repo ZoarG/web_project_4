@@ -5,7 +5,6 @@ const profileProfession = document.querySelector(".profile__subtitle");
 const profileForm = document.forms.profileForm;
 const profilePopup = document.querySelector(".popup_type_profile");
 const editButton = document.querySelector(".profile__edit-button");
-const saveButton = profilePopup.querySelector(".popup__save");
 const closeButton = profilePopup.querySelector(".popup__close");
 let inputName = profilePopup.querySelector(".popup__input_type_name");
 let inputProfession = profilePopup.querySelector(

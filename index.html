@@ -12,28 +12,23 @@
 <body class="page">
     <section class="popup popup_type_profile" id="popup-template">
         <div class="popup__square">
-            <form name="profileForm" class="popup__form popup__form_edit" novalidate>
-                <h1 class="popup__title">Edit Profile</h1>
-                <label class="popup__formfield">
-                    <input class="popup__input popup__input_type_name" type="text" placeholder="Name" id="name-input"
-                        minlength="2" maxlength="40" required>
-                </label>
-                <label class="popup__formfield">
-                    <input class="popup__input popup__input_type_profession" type="text" placeholder="Profession"
-                        id="profession-input" minlength="2" maxlength="200" required>
-                </label>
+            <form name="profileForm" class="popup__form popup__form_edit">
+                <h2 class="popup__title">Edit Profile</h2>
+                <input class="popup__input popup__input_type_name" type="text" name="field_name" placeholder="Name"
+                    id="name-input" minlength="2" maxlength="40" required>
+                <input class="popup__input popup__input_type_profession" type="text" name="field_profession"
+                    placeholder="Profession" id="profession-input" minlength="2" maxlength="200" required>
                 <button type='submit' class="popup__save">Save</button>
                 <button type='button' class='popup__close'></button>
             </form>
         </div>
     </section>
-    <section class="header">
+    <header class="header">
         <img class="header__logo" src="./images/logo.svg" alt="around the us">
-        <div class="header__border"></div>
-    </section>
+    </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__image" src="./images/jacques profile.png" alt="Jacques Cousteau's profile picture">
+            <img class="profile__image" src="./images/jacques_profile.png" alt="Jacques Cousteaus profile picture">
             <div class="profile__container">
                 <div class="profile__header">
                     <h1 class="profile__title">Jacques Cousteau </h1>
@@ -46,21 +41,21 @@
         <section class="elements">
             <ul class="elements__cards">
                 <li class="elements__card">
-                    <img class="elements__image" src="./images/yasemite valley.jpg" alt="Yosemite Valley">
+                    <img class="elements__image" src="./images/yasemite_valley.jpg" alt="Yosemite Valley">
                     <div class="elements__handle">
                         <h2 class="elements__card-text">Yosemite Valley</h2>
                         <button class="elements__button-like" type="button"></button>
                     </div>
                 </li>
                 <li class="elements__card">
-                    <img class="elements__image" src="./images/luoise lake.png" alt="Lake Louise">
+                    <img class="elements__image" src="./images/luoise_lake.png" alt="Lake Louise">
                     <div class="elements__handle">
                         <h2 class="elements__card-text">Lake Louise</h2>
                         <button class="elements__button-like" type="button"></button>
                     </div>
                 </li>
                 <li class="elements__card">
-                    <img class="elements__image" src="./images/bald mountains.png" alt="Bald Mountains">
+                    <img class="elements__image" src="./images/bald_mountains.png" alt="Bald Mountains">
                     <div class="elements__handle">
                         <h2 class="elements__card-text">Bald Mountains</h2>
                         <button class="elements__button-like" type="button"></button>
@@ -74,14 +69,14 @@
                     </div>
                 </li>
                 <li class="elements__card">
-                    <img class="elements__image" src="./images/Vanoise Nationa....png" alt="Vanoise National park">
+                    <img class="elements__image" src="./images/Vanoise_National.png" alt="Vanoise National park">
                     <div class="elements__handle">
                         <h2 class="elements__card-text">Vanoise Nationa...</h2>
                         <button class="elements__button-like" type="button"></button>
                     </div>
                 </li>
                 <li class="elements__card">
-                    <img class="elements__image" src="./images/Lago di Braies.png" alt="Lago di Braies">
+                    <img class="elements__image" src="./images/Lago_di_Braies.png" alt="Lago di Braies">
                     <div class="elements__handle">
                         <h2 class="elements__card-text">Lago di Braies</h2>
                         <button class="elements__button-like" type="button"></button>
@@ -89,10 +84,10 @@
                 </li>
             </ul>
         </section>
-        <footer class="footer">
-            <p class="footer__text">© 2022 Around The U.S.</p>
-        </footer>
     </main>
+    <footer class="footer">
+        <p class="footer__text">© 2022 Around The U.S.</p>
+    </footer>
     <script src="./scripts/index.js"></script>
 </body>
 
