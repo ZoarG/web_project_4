@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 21.78px;
   margin: 0 0 60px;
 }
 
@@ -12,5 +12,7 @@
   .footer__text {
     margin: 50px 19px 36px;
     text-align: left;
+    font-size: 14px;
+    line-height: 16.94px;
   }
 }
