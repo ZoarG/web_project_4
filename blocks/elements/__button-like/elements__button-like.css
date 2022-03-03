@@ -8,6 +8,6 @@
   transition: opacity linear 0.35s;
 }
 
-.elements__button-like {
+.elements__button-like:hover {
   cursor: pointer;
 }
