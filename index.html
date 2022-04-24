@@ -1,94 +1,102 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" window.top="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pages/index.css" />
-    <title>Around the Us</title>
+    <title>Around The U.S.</title>
+    <link rel="stylesheet" href="./pages/index.css">
+    <meta name="Practicum-Yandex, Sprint4, Project" content="Practicum by Yandex Sprint4 Project">
+    <link rel="stylesheet" src="./vendor/fonts/fonts.css">
 </head>
 
 <body class="page">
     <section class="popup popup_type_profile" id="popup-template">
         <div class="popup__square">
-            <form name="profileForm" class="popup__form popup__form_edit">
-                <h2 class="popup__title">Edit Profile</h2>
-                <input class="popup__input popup__input_type_name" type="text" name="field_name" placeholder="Name"
-                    id="name-input" minlength="2" maxlength="40" required>
-                <input class="popup__input popup__input_type_profession" type="text" name="field_profession"
-                    placeholder="Profession" id="profession-input" minlength="2" maxlength="200" required>
-                <button type='submit' class="popup__save">Save</button>
-                <button type='button' class='popup__close'></button>
+            <form name="profileForm" class="popup__form popup__form_edit" novalidate="">
+                <h1 class="popup__title">Edit Profile</h1>
+                <label class="popup__formfield">
+                    <input class="popup__input popup__input_type_name" type="text" placeholder="Name" id="name-input"
+                        minlength="2" maxlength="40" required="">
+                    <span id="name-input-error" class="popup__input-error"></span>
+                </label>
+                <label class="popup__formfield">
+                    <input class="popup__input popup__input_type_profession" type="text" placeholder="Profession"
+                        id="profession-input" minlength="2" maxlength="200" required="">
+                    <span id="profession-input-error" class="popup__input-error"> </span>
+                </label>
+                <button type="submit" class="popup__save">Save</button>
+                <button type="button" class="popup__close"></button>
             </form>
         </div>
     </section>
-    <header class="header">
-        <img class="header__logo" src="./images/logo.svg" alt="around the us">
-    </header>
-    <main class="content">
-        <section class="profile">
-            <img class="profile__image" src="./images/jacques_profile.png" alt="Jacques Cousteaus profile picture">
-            <div class="profile__container">
-                <div class="profile__header">
-                    <h1 class="profile__title">Jacques Cousteau </h1>
-                    <button type="button" class="profile__edit-button"></button>
+    <!--Addup popup form-->
+    <section class="popup popup_type_add-card" id="popup-template-form">
+        <div class="popup__square">
+            <form name="addCards" class="popup__form popup__form_cards" novalidate="">
+                <h1 class="popup__title">New Place</h1>
+                <label class="popup__formfield">
+                    <input class="popup__input popup__input_type_title" type="text" placeholder="Title"
+                        id="cardTitle-input" minlength="1" maxlength="30" required="">
+                    <span id="cardTitle-input-error" class="popup__input-error"></span>
+                </label>
+                <label class="popup__formfield">
+                    <input class="popup__input popup__input_type_link" type="url" placeholder="Link"
+                        id="cardImageLink-input" required="">
+                    <span id="cardImageLink-input-error" class="popup__input-error"></span>
+                </label>
+                <button type="submit" class="popup__save">Create</button>
+                <button type="button" class="popup__close popup__close_add"></button>
+            </form>
+        </div>
+    </section>
+    <!--popup for image-->
+    <section class="popup popup_type-preview">
+        <div class="popup__square popup__square_preview">
+            <button type="button" class="popup__close popup__close_preview"></button>
+            <img class="popup__image" src=" " alt=" ">
+            <p class="popup__subtitle"></p>
+        </div>
+    </section>
+    <div class="page__content">
+        <header class="header">
+            <img class="header__logo" src="./images/logo.svg" alt="Logo text writes Around the U.S.">
+        </header>
+        <main class="content">
+            <section class="profile">
+                <img class="profile__image" src="./images/jacques_profile.png" alt="An image of Jacques Costau">
+                <div class="profile__info">
+                    <div class="profile__line-header">
+                        <h2 class="profile__header">Jacques Cousteau </h2>
+                        <button type="button" class="profile__button"></button>
+                    </div>
+                    <p class="profile__profession">Explorer</p>
                 </div>
-                <p class="profile__subtitle">Explorer</p>
-            </div>
-            <button type="button" class="add-button"></button>
-        </section>
-        <section class="elements">
-            <ul class="elements__cards">
-                <li class="elements__card">
-                    <img class="elements__image" src="./images/yasemite_valley.jpg" alt="Yosemite Valley">
-                    <div class="elements__handle">
-                        <h2 class="elements__card-text">Yosemite Valley</h2>
-                        <button class="elements__button-like" type="button"></button>
-                    </div>
-                </li>
-                <li class="elements__card">
-                    <img class="elements__image" src="./images/luoise_lake.png" alt="Lake Louise">
-                    <div class="elements__handle">
-                        <h2 class="elements__card-text">Lake Louise</h2>
-                        <button class="elements__button-like" type="button"></button>
-                    </div>
-                </li>
-                <li class="elements__card">
-                    <img class="elements__image" src="./images/bald_mountains.png" alt="Bald Mountains">
-                    <div class="elements__handle">
-                        <h2 class="elements__card-text">Bald Mountains</h2>
-                        <button class="elements__button-like" type="button"></button>
-                    </div>
-                </li>
-                <li class="elements__card">
-                    <img class="elements__image" src="./images/latmer.png" alt="Latemar">
-                    <div class="elements__handle">
-                        <h2 class="elements__card-text">Latemar</h2>
-                        <button class="elements__button-like" type="button"></button>
-                    </div>
-                </li>
-                <li class="elements__card">
-                    <img class="elements__image" src="./images/Vanoise_National.png" alt="Vanoise National park">
-                    <div class="elements__handle">
-                        <h2 class="elements__card-text">Vanoise Nationa...</h2>
-                        <button class="elements__button-like" type="button"></button>
-                    </div>
-                </li>
-                <li class="elements__card">
-                    <img class="elements__image" src="./images/Lago_di_Braies.png" alt="Lago di Braies">
-                    <div class="elements__handle">
-                        <h2 class="elements__card-text">Lago di Braies</h2>
-                        <button class="elements__button-like" type="button"></button>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer class="footer">
-        <p class="footer__text">© 2022 Around The U.S.</p>
-    </footer>
-    <script src="./scripts/index.js"></script>
+
+                <button type="button" class="add-button"></button>
+            </section>
+            <section class="elements page__section">
+                <ul class="elements__cards"></ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">© 2022 Around The U.S.</p>
+        </footer>
+        <template id="card-template">
+            <li class="elements__card">
+                <button class="elements__button-delete" type="button"></button>
+                <img class="elements__image" src=" " alt="">
+                <div class="elements__handle">
+                    <h2 class="elements__card-text"></h2>
+                    <button class="elements__button-like" type="button"></button>
+                </div>
+            </li>
+        </template>
+    </div>
+    <script src="./scripts/modules/cards.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
+
+
 </body>
 
 </html>

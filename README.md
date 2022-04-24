@@ -2,7 +2,7 @@
 
 ### Overview
 
-This is project 4 in practicum's sprint.
+This is project 4&5 in practicum's sprint.
 In this sprint we have started to use javaScript and have combined js scripts with a responsive layout.
 the design follows a figma template provided below.
 

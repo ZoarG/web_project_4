@@ -7,10 +7,10 @@
   max-width: 880px;
 }
 
-@media screen and (max-width: 768px) {
-  .profile {
-    width: 90%;
-    margin: 38px auto 0px;
-    flex-direction: column;
+@media screen and (max-width:720px) {
+.profile {
+  width: 90%;
+  margin: 38px auto 0px;
+  flex-direction: column;
   }
 }

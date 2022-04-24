@@ -1,6 +1,6 @@
-.profile__text {
+.profile__line-header {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items:baseline;
   max-width: 100%;
 }
