@@ -140,13 +140,6 @@ const openImagePreview = (card) => {
 previewButtonClose.addEventListener("click", () => closePopup(previewImage));
 buttonClose.addEventListener("click", () => closePopup(cardPopup));
 
-const inputList = [...document.querySelectorAll(".popup__input")];
-const inactiveButtonClass = "popup__save_disabled";
-const newCardSubmitButton = document.querySelector(
-  "form[name='addCards'] .popup__save"
-);
-
 addButton.addEventListener("click", () => {
   openPopup(cardPopup);
-  toggleButton(inputList, newCardSubmitButton, { inactiveButtonClass });
 });
