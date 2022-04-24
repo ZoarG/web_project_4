@@ -22,7 +22,6 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove(popupSelector);
-  removeKeyDownListener();
 }
 
 function openProfilePopup() {
