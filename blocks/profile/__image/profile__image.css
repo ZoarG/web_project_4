@@ -5,7 +5,7 @@
   max-height: 120px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 880px) {
   .profile__image {
     margin: 0px auto;
     display: flex;
@@ -13,7 +13,6 @@
     align-items: center;
     width: 50%;
   }
-
 }
 
 @media screen and (max-width: 320px) {
@@ -22,5 +21,4 @@
     display: flex;
     justify-content: center;
   }
-
 }

@@ -12,6 +12,11 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 880px) {
+  .elements__cards {
+    max-width: 820px;
+  }
+}
 @media screen and (max-width: 768px) {
   .elements__cards {
     margin: 0px auto;

@@ -6,13 +6,11 @@
   line-height: 1.15;
   margin-top: 22px;
   margin-bottom: 16px;
-  /*margin-right: 16px;*/ /*moved to profile button as left*/
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   max-width: 485px;
 }
-
 
 @media screen and (max-width: 720px) {
   .profile__header {
@@ -21,13 +19,11 @@
   }
 }
 
-
 @media screen and (max-width: 320px) {
   .profile__header {
     font-size: 22px;
     line-height: 1.21;
     max-width: 282px;
     margin: 0px 10px 14px 0px;
-
   }
 }
