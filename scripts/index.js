@@ -33,8 +33,8 @@ function openProfilePopup() {
 
 function handleProfileFormSubmit(event) {
   event.preventDefault();
-  profileName.textContent = inputName.value;
-  profileProfession.textContent = inputProfession.value;
+  profileName.textContent = inputNameField.value;
+  profileProfession.textContent = inputProfessionField.value;
   closePopup(profilePopup);
 }
 
