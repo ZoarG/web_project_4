@@ -14,15 +14,17 @@
 <body class="page">
     <section class="popup popup_type_profile" id="popup-template">
         <div class="popup__square">
-            <form name="profileForm" class="popup__form popup__form_edit" novalidate="">
+            <form name="profileForm" class="popup__form popup__form_edit" novalidate>
                 <h1 class="popup__title">Edit Profile</h1>
                 <label class="popup__formfield">
                     <input class="popup__input popup__input_type_name" type="text" placeholder="Name" id="name-input"
-                        minlength="2" maxlength="40" required="">
+                        minlength="2" maxlength="40" required>
+                    <span id="profession-input-error" class="popup__input-error"> </span>
                 </label>
                 <label class="popup__formfield">
                     <input class="popup__input popup__input_type_profession" type="text" placeholder="Profession"
-                        id="profession-input" minlength="2" maxlength="200" required="">
+                        id="profession-input" minlength="2" maxlength="200" required>
+                    <span id="name-input-error" class="popup__input-error"></span>
                 </label>
                 <button type="submit" class="popup__save">Save</button>
                 <button type="button" class="popup__close"></button>
@@ -32,15 +34,17 @@
     <!--Addup popup form-->
     <section class="popup popup_type_add-card" id="popup-template-form">
         <div class="popup__square">
-            <form name="addCards" class="popup__form popup__form_cards" novalidate="">
+            <form name="addCards" class="popup__form popup__form_cards" novalidate>
                 <h1 class="popup__title">New Place</h1>
                 <label class="popup__formfield">
                     <input class="popup__input popup__input_type_title" type="text" placeholder="Title"
-                        id="cardTitle-input" minlength="1" maxlength="30" required="">
+                        id="cardTitle-input" minlength="1" maxlength="30" required>
+                    <span id="cardTitle-input-error" class="popup__input-error"></span>
                 </label>
                 <label class="popup__formfield">
                     <input class="popup__input popup__input_type_link" type="url" placeholder="Link"
-                        id="cardImageLink-input" required="">
+                        id="cardImageLink-input" required>
+                    <span id="cardImageLink-input-error" class="popup__input-error"></span>
                 </label>
                 <button type="submit" class="popup__save">Create</button>
                 <button type="button" class="popup__close popup__close_add"></button>
@@ -90,6 +94,7 @@
             </li>
         </template>
     </div>
+    <script type="module" src="./scripts/modules/validation.js"></script>
     <script src="./scripts/modules/cards.js"></script>
     <script type="module" src="./scripts/index.js"></script>
 

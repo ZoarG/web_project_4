@@ -1,3 +1,5 @@
+import { toggleButton } from "./modules/validation.js";
+
 const profileInfo = document.querySelector(".profile__info");
 const profileName = profileInfo.querySelector(".profile__header");
 const profileProfession = profileInfo.querySelector(".profile__profession");
@@ -142,4 +144,15 @@ AddButtonClose.addEventListener("click", () => closePopup(cardPopup));
 
 addCardButton.addEventListener("click", () => {
   openPopup(cardPopup);
+});
+
+const inputList = [...document.querySelectorAll(".popup__input")];
+const inactiveButtonClass = "popup__save_disabled";
+const newCardSubmitButton = document.querySelector(
+  "form[name='addCards'] .popup__save"
+);
+
+addButton.addEventListener("click", () => {
+  openPopup(cardPopup);
+  toggleButton(inputList, newCardSubmitButton, { inactiveButtonClass });
 });
