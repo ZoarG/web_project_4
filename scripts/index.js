@@ -9,7 +9,7 @@ const popupList = document.querySelectorAll(".popup");
 const profileForm = document.forms.profileForm;
 const profilePopup = document.querySelector(".popup_type_profile");
 const editProfileButton = document.querySelector(".profile__button");
-const saveProfileButton = profilePopup.querySelector(".popup__save");
+// const saveProfileButton = profilePopup.querySelector(".popup__save");
 const closePopupButton = profilePopup.querySelector(".popup__close");
 const inputNameField = profilePopup.querySelector(".popup__input_type_name");
 const inputProfessionField = profilePopup.querySelector(
@@ -62,8 +62,8 @@ function removeKeyDownListener() {
 popupList.forEach((popup) => {
   popup.addEventListener("mousedown", (evt) => {
     if (evt.target.matches(".popup")) {
-      const openedPopup = document.querySelector(`.${popupSelector}`);
-      closePopup(openedPopup);
+      const Popup = document.querySelector(`.${popupSelector}`);
+      closePopup(Popup);
     }
   });
 });
@@ -77,11 +77,19 @@ const addCardButton = document.querySelector(".add-button");
 const previewButtonClose = document.querySelector(
   ".popup__close.popup__close_preview"
 );
-const AddButtonClose = document.querySelector(".popup__close.popup__close_add");
+const addButtonClose = document.querySelector(".popup__close.popup__close_add");
 const inputIntoTitle = document.querySelector(".popup__input_type_title");
 const inputIntoImage = document.querySelector(".popup__input_type_link");
 
 const elementsList = document.querySelector(".elements__cards");
+const addPopupInputs = cardPopup;
+const inactiveButtonClass = "popup__save_disabled";
+const newCardSubmitButton = document.querySelector(
+  "form[name='addCards'] .popup__save"
+);
+
+previewButtonClose.addEventListener("click", () => closePopup(previewImage));
+addButtonClose.addEventListener("click", () => closePopup(cardPopup));
 
 function createCardElement(card) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -127,6 +135,7 @@ formCards.addEventListener("submit", (evt) => {
   renderCard(createCardElement(card), elementsList);
   evt.preventDefault();
   closePopup(cardPopup);
+  toggleButton(addPopupInputs, newCardSubmitButton, { inactiveButtonClass });
   formCards.reset();
 });
 
@@ -139,20 +148,6 @@ const openImagePreview = (card) => {
   popupTitle.textContent = card.name;
 };
 
-previewButtonClose.addEventListener("click", () => closePopup(previewImage));
-AddButtonClose.addEventListener("click", () => closePopup(cardPopup));
-
 addCardButton.addEventListener("click", () => {
   openPopup(cardPopup);
-});
-
-const inputList = [...document.querySelectorAll(".popup__input")];
-const inactiveButtonClass = "popup__save_disabled";
-const newCardSubmitButton = document.querySelector(
-  "form[name='addCards'] .popup__save"
-);
-
-addButton.addEventListener("click", () => {
-  openPopup(cardPopup);
-  toggleButton(inputList, newCardSubmitButton, { inactiveButtonClass });
 });

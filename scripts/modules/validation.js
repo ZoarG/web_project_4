@@ -20,13 +20,13 @@ const checkInputValidity = (formElement, input, settings) => {
   }
 };
 
-const hasValidInput = (inputList) => {
-  return inputList.every((input) => input.validity.valid);
+const hasValidInput = (addPopupInput) => {
+  return addPopupInput.every((input) => input.validity.valid);
 };
 
-export const toggleButton = (inputList, button, settings) => {
-  console.log(hasValidInput(inputList));
-  if (hasValidInput(inputList)) {
+export const toggleButton = (addPopupInput, button, settings) => {
+  console.log(hasValidInput(addPopupInput));
+  if (hasValidInput(addPopupInput)) {
     button.disabled = false;
     button.classList.remove(settings.inactiveButtonClass);
   } else {
