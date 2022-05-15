@@ -82,7 +82,6 @@ const inputIntoTitle = document.querySelector(".popup__input_type_title");
 const inputIntoImage = document.querySelector(".popup__input_type_link");
 
 const elementsList = document.querySelector(".elements__cards");
-const addPopupInputs = cardPopup;
 const inactiveButtonClass = "popup__save_disabled";
 const newCardSubmitButton = document.querySelector(
   "form[name='addCards'] .popup__save"
@@ -90,6 +89,7 @@ const newCardSubmitButton = document.querySelector(
 
 previewButtonClose.addEventListener("click", () => closePopup(previewImage));
 addButtonClose.addEventListener("click", () => closePopup(cardPopup));
+const inputList = [...document.querySelectorAll(".popup__input")];
 
 function createCardElement(card) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -135,7 +135,6 @@ formCards.addEventListener("submit", (evt) => {
   renderCard(createCardElement(card), elementsList);
   evt.preventDefault();
   closePopup(cardPopup);
-  toggleButton(addPopupInputs, newCardSubmitButton, { inactiveButtonClass });
   formCards.reset();
 });
 
@@ -150,4 +149,5 @@ const openImagePreview = (card) => {
 
 addCardButton.addEventListener("click", () => {
   openPopup(cardPopup);
+  toggleButton(inputList, newCardSubmitButton, { inactiveButtonClass });
 });
