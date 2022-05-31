@@ -1,7 +1,7 @@
 .elements__button-like {
   background-image: url(../../../images/like_button.svg);
   background-repeat: no-repeat;
-  width: 21px;
+  width: 23px;
   height: 21px;
   border: 0px;
   background-color: transparent;
@@ -16,6 +16,6 @@
 .elements__button-like_active {
   background-image: url("../../../images/black_heart.svg");
   background-repeat: no-repeat;
-  width: 21px;
+  width: 23px;
   height: 19px;
 }
