@@ -34,7 +34,7 @@ const inactiveButtonClass = "popup__save_disabled";
 const newCardSubmitButton = document.querySelector(
   "form[name='addCards'] .popup__save"
 );
-const addPopupInputs = cardPopup.querySelectorAll;
+const addPopupInputs = [...cardPopup.querySelectorAll(".popup__input")];
 
 function openPopup(popup) {
   popup.classList.add(popupSelector);
@@ -80,7 +80,7 @@ function removeKeyDownListener() {
 
 popupList.forEach((popup) => {
   popup.addEventListener("mousedown", (evt) => {
-    if (evt.target.classList.contains("popup")) {
+    if (evt.target.classList.contains(".popup_open")) {
       const Popup = document.querySelector(`.${popupSelector}`);
       closePopup(Popup);
     }

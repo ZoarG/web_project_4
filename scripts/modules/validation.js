@@ -21,7 +21,7 @@ const checkInputValidity = (formElement, input, settings) => {
 };
 
 const hasValidInput = (inputList) => {
-  return inputList.every((input) => input.validity.valid); //by default it's true*/
+  return inputList.every((input) => input.validity.valid);
 };
 
 export const toggleButton = (inputList, button, settings) => {
