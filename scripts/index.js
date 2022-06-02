@@ -9,7 +9,7 @@ const popupList = document.querySelectorAll(".popup");
 const profileForm = document.forms.profileForm;
 const profilePopup = document.querySelector(".popup_type_profile");
 const editProfileButton = document.querySelector(".profile__button");
-const closePopupButton = profilePopup.querySelector(".popup__close");
+
 const inputNameField = profilePopup.querySelector(".popup__input_type_name");
 const inputProfessionField = profilePopup.querySelector(
   ".popup__input_type_profession"
@@ -22,10 +22,7 @@ const cardTemplate = cardTemplateBase.querySelector(".elements__card");
 const previewImage = document.querySelector(".popup_type-preview");
 const cardPopup = document.querySelector(".popup_type_add-card");
 const addCardButton = document.querySelector(".add-button");
-const previewButtonClose = document.querySelector(
-  ".popup__close.popup__close_preview"
-);
-const addButtonClose = document.querySelector(".popup__close.popup__close_add");
+
 const inputIntoTitle = document.querySelector(".popup__input_type_title");
 const inputIntoImage = document.querySelector(".popup__input_type_link");
 
@@ -35,6 +32,7 @@ const newCardSubmitButton = document.querySelector(
   "form[name='addCards'] .popup__save"
 );
 const addPopupInputs = [...cardPopup.querySelectorAll(".popup__input")];
+const closeButtons = document.querySelectorAll(".popup__close");
 
 function openPopup(popup) {
   popup.classList.add(popupSelector);
@@ -61,7 +59,6 @@ function handleProfileFormSubmit(event) {
 
 editProfileButton.addEventListener("click", openProfilePopup);
 profileForm.addEventListener("submit", handleProfileFormSubmit);
-closePopupButton.addEventListener("click", () => closePopup(profilePopup));
 
 function handleKeyDown(evt) {
   if (evt.key === "Escape") {
@@ -80,15 +77,14 @@ function removeKeyDownListener() {
 
 popupList.forEach((popup) => {
   popup.addEventListener("mousedown", (evt) => {
-    if (evt.target.classList.contains(".popup_open")) {
-      const Popup = document.querySelector(`.${popupSelector}`);
-      closePopup(Popup);
+    if (
+      evt.target.classList.contains("popup") ||
+      evt.target.classList.contains("popup__close-button")
+    ) {
+      closePopup(popup);
     }
   });
 });
-
-previewButtonClose.addEventListener("click", () => closePopup(previewImage));
-addButtonClose.addEventListener("click", () => closePopup(cardPopup));
 
 function createCardElement(card) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -149,4 +145,11 @@ const openImagePreview = (card) => {
 addCardButton.addEventListener("click", () => {
   openPopup(cardPopup);
   toggleButton(addPopupInputs, newCardSubmitButton, { inactiveButtonClass });
+});
+
+closeButtons.forEach((button) => {
+  // find the closest popup
+  const popup = button.closest(".popup");
+  // set the listener
+  button.addEventListener("click", () => closePopup(popup));
 });
