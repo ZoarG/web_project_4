@@ -21,11 +21,11 @@ export default class Card {
   _handleTrashButton = () => this._cardElement.remove();
 
   _handleCardClick = () => {
-    _openImagePreview();
+    this._openImagePreview();
   };
 
   _openImagePreview = () => {
-    this.previewImage = document.querySelector(".popup_type-preview");
+    const previewImage = document.querySelector(".popup_type-preview");
     this.popupImage = previewImage.querySelector(".popup__image");
     this.popupTitle = previewImage.querySelector(".popup__subtitle");
     this.popupImage.src = this._link;

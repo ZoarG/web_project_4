@@ -1,5 +1,5 @@
 import Card from "./modules/card.js";
-import { openPopup, closePopup } from "./utils.js";
+import { openPopup, closePopup, defaultFormConfig } from "./utils.js";
 import { initialCards } from "./modules/cards.js";
 import FormValidator from "./modules/formValidator.js";
 
@@ -28,9 +28,6 @@ const inputIntoTitle = document.querySelector(".popup__input_type_title");
 const inputIntoImage = document.querySelector(".popup__input_type_link");
 
 const elementsList = document.querySelector(".elements__cards");
-const newCardSubmitButton = document.querySelector(
-  "form[name='addCards'] .popup__save"
-);
 const addPopupInputs = [...cardPopup.querySelectorAll(".popup__input")];
 const closeButtons = document.querySelectorAll(".popup__close");
 
@@ -44,6 +41,8 @@ function handleProfileFormSubmit(event) {
   event.preventDefault();
   profileName.textContent = inputNameField.value;
   profileProfession.textContent = inputProfessionField.value;
+  const editProfileForm = new FormValidator(defaultFormConfig, profilePopup);
+  editProfileForm.enableValidation();
   closePopup(profilePopup);
 }
 
