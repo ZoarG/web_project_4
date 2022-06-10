@@ -25,13 +25,13 @@ export default class Card {
   };
 
   _openImagePreview = () => {
-    const previewImage = document.querySelector(".popup_type-preview");
+    this.previewImage = document.querySelector(".popup_type-preview");
+    this.popupImage = previewImage.querySelector(".popup__image");
+    this.popupTitle = previewImage.querySelector(".popup__subtitle");
+    this.popupImage.src = this._link;
+    this.popupImage.alt = this._alt;
+    this.popupTitle.textContent = this._name;
     openPopup(previewImage);
-    const popupImage = previewImage.querySelector(".popup__image");
-    const popupTitle = previewImage.querySelector(".popup__subtitle");
-    popupImage.src = this._link;
-    popupImage.alt = this._alt;
-    popupTitle.textContent = this._name;
   };
 
   _setEventListeners() {
