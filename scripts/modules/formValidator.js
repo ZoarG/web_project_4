@@ -15,8 +15,10 @@ class FormValidator {
   _toggleButton() {
     if (this._hasValidInputs()) {
       this._buttonElement.disabled = false;
+      this._buttonElement.classList.remove(this._config.inactiveButtonClass);
     } else {
       this._buttonElement.disabled = true;
+      this._buttonElement.classList.add(this._config.inactiveButtonClass);
     }
   }
 
@@ -37,10 +39,9 @@ class FormValidator {
 
   _showInputError = (input) => {
     const errorSpan = this._element.querySelector(`#${input.id}-error`);
-
+    input.classList.add(this._config.inputErrorClass);
     errorSpan.textContent = input.validationMessage;
     errorSpan.classList.add(this._config.errorClass);
-    input.classList.add(this._config.inputErrorClass);
   };
 
   _hideInputError = (input) => {

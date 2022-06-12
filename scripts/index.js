@@ -28,8 +28,10 @@ const inputIntoTitle = document.querySelector(".popup__input_type_title");
 const inputIntoImage = document.querySelector(".popup__input_type_link");
 
 const elementsList = document.querySelector(".elements__cards");
-const addPopupInputs = [...cardPopup.querySelectorAll(".popup__input")];
+//const addPopupInputs = [...cardPopup.querySelectorAll(".popup__input")];
 const closeButtons = document.querySelectorAll(".popup__close");
+const popupProfileForm = document.querySelector(".popup__form_edit");
+const popupCardForm = document.querySelector(".popup_type_add-card");
 
 function openProfilePopup() {
   openPopup(profilePopup);
@@ -41,8 +43,6 @@ function handleProfileFormSubmit(event) {
   event.preventDefault();
   profileName.textContent = inputNameField.value;
   profileProfession.textContent = inputProfessionField.value;
-  const editProfileForm = new FormValidator(defaultFormConfig, profilePopup);
-  editProfileForm.enableValidation();
   closePopup(profilePopup);
 }
 
@@ -82,8 +82,6 @@ formCards.addEventListener("submit", (evt) => {
 
 addCardButton.addEventListener("click", () => {
   openPopup(cardPopup);
-  const addCardForm = new FormValidator(defaultFormConfig, addPopupInputs);
-  addCardForm.enableValidation();
 });
 
 closeButtons.forEach((button) => {
@@ -92,3 +90,10 @@ closeButtons.forEach((button) => {
   // set the listener
   button.addEventListener("click", () => closePopup(popup));
 });
+
+//validation
+
+const profileEditForm = new FormValidator(defaultFormConfig, popupProfileForm);
+profileEditForm.enableValidation();
+const addCardForm = new FormValidator(defaultFormConfig, popupCardForm);
+addCardForm.enableValidation();

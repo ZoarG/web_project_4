@@ -26,9 +26,9 @@ function handleKeyDown(evt) {
 }
 
 export const defaultFormConfig = {
-  inputSelector: ".form__input",
-  submitButtonSelector: ".form__submit-button",
-  inactiveButtonClass: "button_blocked",
-  inputErrorClass: "form__input-error",
-  errorClass: "form__input-error_visible",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__save",
+  inactiveButtonClass: "popup__save_disabled",
+  inputErrorClass: "popup__input-error_open",
+  errorClass: "popup__error_visible",
 };
