@@ -18,33 +18,32 @@ export default class Card {
   _handleLikeButton = (evt) =>
     evt.target.classList.toggle("elements__button-like_active");
 
-  _handleTrashButton = () => this._cardElement.remove();
-
   _handleCardClick = () => {
     this._openImagePreview();
   };
 
   _openImagePreview = () => {
     const previewImage = document.querySelector(".popup_type-preview");
-    this.popupImage = previewImage.querySelector(".popup__image");
-    this.popupTitle = previewImage.querySelector(".popup__subtitle");
-    this.popupImage.src = this._link;
-    this.popupImage.alt = this._alt;
-    this.popupTitle.textContent = this._name;
+    const popupImage = previewImage.querySelector(".popup__image");
+    const popupTitle = previewImage.querySelector(".popup__subtitle");
+    popupImage.src = this._link;
+    popupImage.alt = this._alt;
+    popupTitle.textContent = this._name;
     openPopup(previewImage);
   };
 
   _setEventListeners() {
     this._cardTrashButtonElement.addEventListener("click", () =>
-      this._handleTrashButton()
+      this._cardElement.remove()
     );
 
     this._cardImageElement.addEventListener("click", () =>
       this._handleCardClick()
     );
 
-    this._cardLikeButtonElement.addEventListener("click", (e) =>
-      this._handleLikeButton(e)
+    this._cardLikeButtonElement.addEventListener(
+      "click",
+      this._handleLikeButton
     );
   }
 
@@ -70,7 +69,7 @@ export default class Card {
     return this._cardElement;
   }
 
-  removeCard() {
+  _removeCard() {
     this.cardElement.remove();
     this.cardElement = null;
   }
