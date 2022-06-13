@@ -39,14 +39,13 @@ class FormValidator {
 
   _showInputError = (input) => {
     const errorSpan = this._element.querySelector(`#${input.id}-error`);
-    input.classList.add(this._config.inputErrorClass);
+    errorSpan.classList.add(this._config.inputErrorClass);
     errorSpan.textContent = input.validationMessage;
     errorSpan.classList.add(this._config.errorClass);
   };
 
   _hideInputError = (input) => {
     const errorSpan = this._element.querySelector(`#${input.id}-error`);
-
     errorSpan.textContent = "";
     errorSpan.classList.remove(this._config.errorClass);
     input.classList.remove(this._config.inputErrorClass);
