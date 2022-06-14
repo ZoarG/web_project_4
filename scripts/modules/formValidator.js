@@ -39,16 +39,16 @@ class FormValidator {
   };
 
   _showInputError = (input) => {
-    const errorSpan = this._element.querySelector(`#${input.id}-error`);
-    errorSpan.classList.add(this._config.inputErrorClass);
-    errorSpan.textContent = input.validationMessage;
-    errorSpan.classList.add(this._config.errorClass);
+    const errorElement = this._element.querySelector(`#${input.id}-error`);
+    errorElement.classList.add(this._config.inputErrorClass);
+    errorElement.textContent = input.validationMessage;
+    errorElement.classList.add(this._config.errorClass);
   };
 
   _hideInputError = (input) => {
-    const errorSpan = this._element.querySelector(`#${input.id}-error`);
-    errorSpan.textContent = "";
-    errorSpan.classList.remove(this._config.errorClass);
+    const errorElement = this._element.querySelector(`#${input.id}-error`);
+    errorElement.textContent = "";
+    errorElement.classList.remove(this._config.errorClass);
     input.classList.remove(this._config.inputErrorClass);
   };
 
@@ -66,7 +66,6 @@ class FormValidator {
     });
 
     this._setEventListeners();
-    this._resetValidation;
   }
 
   _resetValidation() {

@@ -11,8 +11,6 @@ export default class Card {
     this._name = data.name;
     this._link = data.link;
     this._alt = `Picture of ${data.name}`;
-
-    this._cardElement = this._cardTemplate.cloneNode(true);
   }
 
   _handleLikeButton = (evt) =>
@@ -48,6 +46,7 @@ export default class Card {
   }
 
   generateCard() {
+    this._cardElement = this._cardTemplate.cloneNode(true);
     this._cardTitleElement = this._cardElement.querySelector(
       ".elements__card-text"
     );
