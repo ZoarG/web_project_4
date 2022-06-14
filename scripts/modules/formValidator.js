@@ -31,6 +31,7 @@ class FormValidator {
 
     this._inputList.forEach((input) => {
       input.addEventListener("input", () => {
+        console.log(input);
         this._сheckInputValidity(input);
         this._toggleButton();
       });
@@ -65,9 +66,10 @@ class FormValidator {
     });
 
     this._setEventListeners();
+    this._resetValidation;
   }
 
-  resetValidation() {
+  _resetValidation() {
     this._element.reset();
     this._inputList.forEach((input) => {
       this._hideInputError(input);
