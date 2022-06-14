@@ -3,10 +3,9 @@
   color: #000000;
   border-color: #000000;
   opacity: 0.2;
-  cursor: pointer;
+  cursor: default;
 }
 
 .popup__save_disabled:hover {
-  cursor: pointer;
   opacity: 0.2;
 }

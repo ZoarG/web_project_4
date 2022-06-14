@@ -1,5 +1,6 @@
 import Card from "./modules/card.js";
-import { openPopup, closePopup, defaultFormConfig } from "./utils.js";
+import { openPopup, closePopup } from "./utils.js";
+import { defaultFormConfig } from "./constants.js";
 import { initialCards } from "./modules/cards.js";
 import FormValidator from "./modules/formValidator.js";
 
@@ -31,7 +32,7 @@ const elementsList = document.querySelector(".elements__cards");
 //const addPopupInputs = [...cardPopup.querySelectorAll(".popup__input")];
 const closeButtons = document.querySelectorAll(".popup__close");
 const popupProfileForm = document.querySelector(".popup__form_edit");
-const profileEditFormValidator = document.querySelector(".popup_type_add-card");
+const addCardFormSelector = document.querySelector(".popup_type_add-card");
 
 function openProfilePopup() {
   openPopup(profilePopup);
@@ -77,6 +78,7 @@ formCards.addEventListener("submit", (evt) => {
   renderCard(card, elementsList);
   evt.preventDefault();
   closePopup(cardPopup);
+  form.reset();
   addCardForm.resetValidation();
 });
 
@@ -95,8 +97,8 @@ closeButtons.forEach((button) => {
 
 const profileEditForm = new FormValidator(defaultFormConfig, popupProfileForm);
 profileEditForm.enableValidation();
-const addCardForm = new FormValidator(
+const addCardFormValidator = new FormValidator(
   defaultFormConfig,
-  profileEditFormValidator
+  addCardFormSelector
 );
-addCardForm.enableValidation();
+addCardFormValidator.enableValidation();
