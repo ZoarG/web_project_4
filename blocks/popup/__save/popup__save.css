@@ -19,10 +19,6 @@
   opacity: 0.8;
 }
 
-.popup__save:disabled:hover {
-  cursor: pointer;
-}
-
 @media screen and (max-width: 524px) {
   .popup__save {
     max-width: 200px;

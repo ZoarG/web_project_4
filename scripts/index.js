@@ -78,7 +78,7 @@ formCards.addEventListener("submit", (evt) => {
   renderCard(card, elementsList);
   evt.preventDefault();
   closePopup(cardPopup);
-  form.reset();
+  formCards.reset();
   addCardForm.resetValidation();
 });
 
@@ -95,8 +95,11 @@ closeButtons.forEach((button) => {
 
 //validation
 
-const profileEditForm = new FormValidator(defaultFormConfig, popupProfileForm);
-profileEditForm.enableValidation();
+const profileEditFormValidator = new FormValidator(
+  defaultFormConfig,
+  popupProfileForm
+);
+profileEditFormValidator.enableValidation();
 const addCardFormValidator = new FormValidator(
   defaultFormConfig,
   addCardFormSelector
